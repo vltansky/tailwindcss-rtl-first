@@ -33,7 +33,6 @@
     "tailwindcss": "3.2.1"
   },
   "scripts": {
-    "prepare": "./.githooks/install.sh",
     "build": "npm run build:lib && npm run build:demo",
     "build:lib": "swc src --out-dir dist --delete-dir-on-start",
     "build:demo": "tailwindcss --config demo/tailwind.config.js --output demo/out.css",

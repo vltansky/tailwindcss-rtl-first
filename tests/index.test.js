@@ -1,6 +1,6 @@
 import pluginFn from "../src/index";
 
-describe("tailwindcss-vanilla-rtl", () => {
+describe("tailwindcss-rtl-first", () => {
   it("disables a stable set of core plugins", () => {
     expect(pluginFn.disabledCorePlugins).toMatchInlineSnapshot(`
       {

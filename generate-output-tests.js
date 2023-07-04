@@ -1,6 +1,6 @@
 const postcss = require("postcss");
 const tailwindcss = require("tailwindcss");
-const vanillaRTL = require("./dist");
+const tailwindRtlFirst = require("./dist");
 
 const rules = {
   "mx-[JIT_VALUE]":
@@ -76,9 +76,9 @@ const obj = Object.keys(rules).reduce((obj, className) => {
           raw: className,
         },
       ],
-      plugins: [vanillaRTL],
+      plugins: [tailwindRtlFirst],
       corePlugins: {
-        ...vanillaRTL.disabledCorePlugins,
+        ...tailwindRtlFirst.disabledCorePlugins,
       },
     }),
   ]).process("@tailwind utilities").css;

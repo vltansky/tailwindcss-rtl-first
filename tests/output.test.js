@@ -1,5 +1,5 @@
 import postcss from "postcss";
-import vanillaRTL from "../dist";
+import tailwindRtlFirst from "../dist";
 import tailwindcss from "tailwindcss";
 
 const rules = {
@@ -77,9 +77,9 @@ Object.entries(rules).forEach(([className, expected]) => {
             raw: className,
           },
         ],
-        plugins: [vanillaRTL],
+        plugins: [tailwindRtlFirst],
         corePlugins: {
-          ...vanillaRTL.disabledCorePlugins,
+          ...tailwindRtlFirst.disabledCorePlugins,
         },
       }),
     ]).process("@tailwind utilities").css;

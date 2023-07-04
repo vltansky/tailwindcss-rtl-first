@@ -5,7 +5,7 @@ import { corePlugins } from "./corePlugins";
  * A single plugin to rule them all.
  * Loading the overriden core plugins.
  */
-const vanillaRTL = plugin((helpers) => {
+const tailwindRtlFirst = plugin((helpers) => {
   corePlugins.inset(helpers);
   corePlugins.margin(helpers);
   corePlugins.scrollMargin(helpers);
@@ -22,7 +22,7 @@ const vanillaRTL = plugin((helpers) => {
  * Use this to disable Tailwind’s core plugins,
  * so we can replace them with RTL-aware equivalents.
  */
-vanillaRTL.disabledCorePlugins = {
+tailwindRtlFirst.disabledCorePlugins = {
   inset: false,
   margin: false,
   scrollMargin: false,
@@ -35,4 +35,4 @@ vanillaRTL.disabledCorePlugins = {
   textAlign: false,
 };
 
-module.exports = vanillaRTL;
+module.exports = tailwindRtlFirst;

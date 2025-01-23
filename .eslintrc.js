@@ -9,5 +9,5 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  ignorePatterns: ["node_modules", "dist"],
+  ignorePatterns: ["node_modules", "dist", "pnpm-lock.yaml", ".github"],
 };

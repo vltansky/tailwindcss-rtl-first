@@ -34,9 +34,8 @@
     "tailwindcss": "4.0.0"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:demo",
+    "build": "npm run build:lib",
     "build:lib": "swc src --out-dir dist --delete-dir-on-start",
-    "build:demo": "tailwindcss --config demo/tailwind.config.js --output demo/out.css",
     "prepublishOnly": "npm run build",
     "format": "prettier --cache --write '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml,md,html}'",
     "lint:js": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .js,.ts,.tsx --report-unused-disable-directives .",

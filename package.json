@@ -1,6 +1,6 @@
 {
   "name": "@vltansky/tailwindcss-rtl-first",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Vlad Tansky",
   "license": "MIT",
   "description": "TailwindCSS RTL First",
@@ -27,6 +27,7 @@
     "@swc/jest": "0.2.37",
     "@swc/register": "0.1.10",
     "@tailwindcss/cli": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
     "eslint": "9.18.0",
     "jest": "29.7.0",
     "postcss": "^8.5.1",
@@ -35,7 +36,7 @@
   },
   "scripts": {
     "build": "npm run build:lib",
-    "build:lib": "swc src --out-dir dist --delete-dir-on-start",
+    "build:lib": "swc src --out-dir dist --delete-dir-on-start --strip-leading-paths",
     "prepublishOnly": "npm run build",
     "format": "prettier --cache --write '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml,md,html}'",
     "lint:js": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .js,.ts,.tsx --report-unused-disable-directives .",
@@ -43,6 +44,7 @@
     "lint": "npm run lint:js && npm run lint:format",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:e2e": "node test-e2e/test.js",
     "report:package": "npm pack --dry-run --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //'"
   },
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"

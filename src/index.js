@@ -18,21 +18,4 @@ const tailwindRtlFirst = plugin((helpers) => {
   corePlugins.textAlign(helpers);
 });
 
-/**
- * Use this to disable Tailwind’s core plugins,
- * so we can replace them with RTL-aware equivalents.
- */
-tailwindRtlFirst.disabledCorePlugins = {
-  inset: false,
-  margin: false,
-  scrollMargin: false,
-  scrollPadding: false,
-  borderRadius: false,
-  borderWidth: false,
-  borderColor: false,
-  borderOpacity: false,
-  padding: false,
-  textAlign: false,
-};
-
 module.exports = tailwindRtlFirst;

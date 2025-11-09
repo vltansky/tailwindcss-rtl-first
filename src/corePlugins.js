@@ -17,8 +17,18 @@ import escapeClassName from './util/escapeClassName'
 import parseAnimationValue from './util/parseAnimationValue'
 */
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
-import withAlphaVariable, { withAlphaValue } from 'tailwindcss/lib/util/withAlphaVariable'
-import toColorValue from 'tailwindcss/lib/util/toColorValue'
+
+// Helper functions for color handling (simplified versions for v4)
+function withAlphaVariable({ color, property, variable }) {
+  return {
+    [variable]: '1',
+    [property]: color,
+  };
+}
+
+function toColorValue(color) {
+  return color;
+}
 /*
 import isPlainObject from './util/isPlainObject'
 import transformThemeValue from './util/transformThemeValue'

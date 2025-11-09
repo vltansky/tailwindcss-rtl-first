@@ -1,20 +1,9 @@
 import pluginFn from "../src/index";
 
 describe("tailwindcss-rtl-first", () => {
-  it("disables a stable set of core plugins", () => {
-    expect(pluginFn.disabledCorePlugins).toMatchInlineSnapshot(`
-      {
-        "borderColor": false,
-        "borderOpacity": false,
-        "borderRadius": false,
-        "borderWidth": false,
-        "inset": false,
-        "margin": false,
-        "padding": false,
-        "scrollMargin": false,
-        "scrollPadding": false,
-        "textAlign": false,
-      }
-    `);
+  it("exports a valid Tailwind CSS v4 plugin", () => {
+    // In v4, plugins are objects with handler and config properties
+    expect(typeof pluginFn).toBe("object");
+    expect(typeof pluginFn.handler).toBe("function");
   });
 });

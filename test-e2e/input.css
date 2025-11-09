@@ -1,0 +1,5 @@
+@plugin "../dist/index.js";
+@import "tailwindcss";
+
+/* Test classes to verify RTL behavior */
+@source inline("ml-0 ml-4 mr-8 pl-2 pr-6 left-0 right-4 rounded-l rounded-r text-left text-right border-l-blue-500 border-r-red-500");

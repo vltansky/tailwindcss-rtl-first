@@ -39,7 +39,7 @@
     "build:lib": "swc src --out-dir dist --delete-dir-on-start --strip-leading-paths",
     "prepublishOnly": "npm run build",
     "format": "prettier --cache --write '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml,md,html}'",
-    "lint:js": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .js,.ts,.tsx --report-unused-disable-directives .",
+    "lint:js": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --report-unused-disable-directives .",
     "lint:format": "prettier --cache --check '**/?(.)*.{css,scss,js,ts,tsx,json,yaml,yml,md}'",
     "lint": "npm run lint:js && npm run lint:format",
     "test": "jest",
